@@ -1,0 +1,178 @@
+
+
+var home_sales_v_new = `
+<div class="sales-background">
+    <img class="sales-background-img" src="image/foto_professores_liveu.png" alt="err">
+    <div id="navbar"></div>
+    <div style="position: relative;">
+        <div class="curso-header flow-text">
+            <h5 class="white-text titulo"><%= curso.nome_projeto%></h5>
+            <h6 class="info flex">
+                <%= curso.desc_area%> | <%= curso.nota%> <i class="material-icons">star_border</i> <!--| <i class="material-icons">desktop_windows</i>-->
+            </h6>
+        </div>
+        <div class="curso-body">
+            <div class="card-panel white">
+                <div class="panel-container">
+                    <div class="curso-actions">
+                        <a class="btn-flat btn-large subscribe" onclick="comprar_sales(<%= curso.id_projeto%>)">Inscreva-se</a>
+                        <br>
+                        <a class="btn-flat start-now" onclick="inscrever_sales(<%= curso.id_projeto%>)">
+                            <i class="material-icons left" style="font-size: 20px; margin-left: -2%; margin-right: 1%;">play_arrow</i>
+                            COMECE A ESTUDAR AGORA
+                        </a>
+                    </div>
+                    <div class="row padding-unset">
+                        <div class="tabs-content-c">
+                            <div class="col s12">
+                                <ul class="tabs items hr">
+                                    <li class="tab col s6"><a class="active hr_bottom" href="#sobre">Sobre</a></li>
+                                    <li class="tab col s6"><a class="hr_bottom" href="#aulas">Aulas</a></li>
+                                </ul>
+                            </div>
+                            <div id="sobre" class="col s12">
+                                <div class="wrap-sobre">
+                                    <div>
+                                        <h5>O que você vai ver</h5>
+                                        <span>
+                                            <%- curso.descricao_projeto%>
+                                        </span>
+                                    </div>
+                                    <div class="tit-estrutura-curso" style="margin-top: 12%;">        
+                                        <h5>Estrutura do Curso</h5>    
+                                    </div> 
+                                    <%for(modulo in modulos){%>
+                                    <ul class="collapsible" style="box-shadow: 1px 1px 18px 3px #e1d5e3; border-radius: 15px;">
+                                        <li style="border-radius: 15px;">
+                                            <div class="estrutura-curso collapsible-header" >
+                                                <div class="flex"> 
+                                                    <div class="text-header">
+                                                        <%= modulos[modulo].modulo %>
+                                                    </div>
+                                                    <div class="signs-header">
+                                                        <i class="fa fa-plus violet-point plus" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            <div class="div-texto-estrutura collapsible-body wrap-sign" style="">
+                                                <ul>
+                                                    <%for (step of modulos[modulo].step){%>
+
+                                                    <li class="violet-point">
+                                                        <span><%=step%></span>
+                                                    </li>  
+
+                                                    <%}%>    
+                                                </ul>                      
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <%}%> 
+                                    <h5 style="">Professores</h5>
+                                    <div class="scrolling-wrapper">
+                                        <%for(professor of professores){%>
+                                        <div class="profile">
+                                            <img src="<%=professor.foto%>">
+                                            <a class="btn-flat btn-small"><%=professor.nome%></a>
+                                            <p><%= professor.formacao%></p>
+                                        </div>
+                                        <%}%>
+                                    </div> 
+                                </div>
+
+                    <!--
+                            <h5 style="margin-top: 70px;">Alunos Anteriores</h5>
+            
+                            <div class="previous-students flex">
+                                <img class="left" src="./image/users/d.jpg">
+                                <div>
+                                    <h5>Marília Gonçalves</h5>
+                                    <h6 class="info flex">
+                                        9,7 <i class="material-icons">star_border</i> | 2018
+                                    </h6>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a
+                                        page when. Various versions have been evolved over the years.</p>
+                                </div>
+                            </div>
+                            <a class="btn-flat btn-large students-expand">Todas as Avaliações</a>
+                        -->
+                    </div>
+                    <div id="aulas" class="col s12">
+                        <div class="main-wrap-aulas">
+                            <div class="wrap-collaps-course">
+                                <select class="browser-default select-cursos">
+                                    <option value="1">Minhas Aulas Trial</option>
+                                    <option value="2">Financas</option>
+                                    <option value="3">Liderance e Gestao de Pessoas</option>
+                                    <option value="4">Projeeto Agile</option>
+                                </select>                      
+                            </div>
+                            <div class="wrap-cards-videos">
+                                <%for(video of videos){%>
+                                <div class="base-modulo-aula <% if (video.isBuy == false ) {%> not-buy <% } %>">
+                                        <div class="wrap-inner-cards-all">
+                                        <div class="wrap-inner-cards">
+                                            <div class="foto-lucio" style="background-image: url('image/foto_lucio.png');border-radius:12px 0 0 12px;">
+                                            </div>
+                                            <div class="text-course-wrap text-course-wrap-flex">
+                                                <div>
+                                                    <p>Start Here - Pós</p>
+                                                    <p>Graduação em</p>
+                                                    <p>Design de Projetos</p>
+                                                </div>
+                                                <!-- <div style="background-image: url('image/icons/warning_1.svg'); height: 25px;width: 28px;">
+                                                </div> -->
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-progress">
+                                            <div class="progress">
+                                              <div class="determinate" style="width: <%=video.progressBar%>%;"></div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div>
+                <!-- <h5 style="">Professores</h5>
+                        <div class="scrolling-wrapper professors-wrap">
+                            <div class="carousel">
+                                <%for(professor of professores){%>
+                                <div class="carousel-item">
+                                    <div class="profile">
+                                        <img src="<%=professor.foto%>">
+                                        <a class="btn-flat btn-small"><%=professor.nome%></a>
+                                        <p><%= professor.formacao%></p>
+                                    </div>
+                                </div>
+                                <%}%>
+                            </div>
+                        </div> -->
+                        <!-- <div class="rere">
+                        <h5 style="">Professores</h5>
+                        <div class="scrolling-wrapper professors-wrap">
+                            <div class="carousel">
+                                <%for(professor of professores){%>
+                                <div class="carousel-item">
+                                    <div class="profile">
+                                        <img src="<%=professor.foto%>">
+                                        <a class="btn-flat btn-small"><%=professor.nome%></a>
+                                        <p><%= professor.formacao%></p>
+                                    </div>
+                                </div>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+`
+

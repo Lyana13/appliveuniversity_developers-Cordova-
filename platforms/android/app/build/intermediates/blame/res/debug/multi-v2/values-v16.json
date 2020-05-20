@@ -1,0 +1,72 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lyana/Desktop/appliveuniversity_developers_new/C:\\Users\\rafael.bottura\\Desktop\\appliveuniversity_developers\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/lyana/Desktop/appliveuniversity_developers_new/C:\\Users\\rafael.bottura\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\07213771bf0a608b076dde63ca582391\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/lyana/Desktop/appliveuniversity_developers_new/C:\\Users\\rafael.bottura\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\80bef121929f238a99f8cad821565ec1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/lyana/Desktop/appliveuniversity_developers_new/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/lyana/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d6202783706b5faf6c7783c0e59f186f/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/home/lyana/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50164a51b6e9beb98d8174c20a481386/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lyana/Desktop/appliveuniversity_developers_new/C:\\Users\\rafael.bottura\\Desktop\\appliveuniversity_developers\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/lyana/Desktop/appliveuniversity_developers_new/C:\\Users\\rafael.bottura\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\07213771bf0a608b076dde63ca582391\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/lyana/Desktop/appliveuniversity_developers_new/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/lyana/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/50164a51b6e9beb98d8174c20a481386/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
